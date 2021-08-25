@@ -7,7 +7,7 @@ RabbitMQ messaging for the TITAN HUD project
 # Building and Running with Docker
 
 * Build the image: `docker build -t titan-hud-messaging .`
-* Run the container: `docker run -d -p 5672:5672 -p 15672:15672 titan-hud-messaging`
+* Run the container: `docker run -d -p 5672:5672 -p 15672:15672 --name titan-hud-messaging titan-hud-messaging`
 
 # Accessing the UI
 

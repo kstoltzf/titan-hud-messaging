@@ -1,0 +1,49 @@
+{
+    "users": [],
+    "vhosts": [
+        {
+            "name": "titan-hud"
+        }
+    ],
+    "permissions": [
+        {
+            "user": "guest",
+            "vhost": "titan-hud",
+            "configure": ".*",
+            "write": ".*",
+            "read": ".*"
+        }
+    ],
+    "parameters": [],
+    "policies": [],
+    "queues": [
+        {
+            "name": "rpms",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        }
+    ],
+    "exchanges": [
+        {
+            "name": "rpms",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        }
+    ],
+    "bindings": [
+        {
+            "source": "rpms",
+            "vhost": "titan-hud",
+            "destination": "rpms",
+            "destination_type": "queue",
+            "routing_key": "rpms",
+            "arguments": {}
+        }
+    ]
+}
