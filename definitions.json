@@ -18,7 +18,84 @@
     "policies": [],
     "queues": [
         {
-            "name": "rpms",
+            "name": "abs-warning-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "battery-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "brake-warning-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "check-engine-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "coolant-temperature-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "fuel-gauge",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "low-fuel-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "oil-pressure-light",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "speedometer",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "tachometer",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "temperature-gauge",
+            "vhost": "titan-hud",
+            "durable": true,
+            "auto_delete": false,
+            "arguments": {}
+        },
+        {
+            "name": "traction-control-light",
             "vhost": "titan-hud",
             "durable": true,
             "auto_delete": false,
@@ -27,7 +104,106 @@
     ],
     "exchanges": [
         {
-            "name": "rpms",
+            "name": "abs-warning-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "battery-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "brake-warning-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "check-engine-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "coolant-temperature-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "fuel-gauge",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "low-fuel-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "oil-pressure-light",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "speedometer",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "tachometer",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "temperature-gauge",
+            "vhost": "titan-hud",
+            "type": "direct",
+            "durable": true,
+            "auto_delete": false,
+            "internal": false,
+            "arguments": {}
+        },
+        {
+            "name": "traction-control-light",
             "vhost": "titan-hud",
             "type": "direct",
             "durable": true,
@@ -38,11 +214,99 @@
     ],
     "bindings": [
         {
-            "source": "rpms",
+            "source": "abs-warning-light",
             "vhost": "titan-hud",
-            "destination": "rpms",
+            "destination": "abs-warning-light",
             "destination_type": "queue",
-            "routing_key": "rpms",
+            "routing_key": "abs-warning-light",
+            "arguments": {}
+        },
+        {
+            "source": "battery-light",
+            "vhost": "titan-hud",
+            "destination": "battery-light",
+            "destination_type": "queue",
+            "routing_key": "battery-light",
+            "arguments": {}
+        },
+        {
+            "source": "brake-warning-light",
+            "vhost": "titan-hud",
+            "destination": "brake-warning-light",
+            "destination_type": "queue",
+            "routing_key": "brake-warning-light",
+            "arguments": {}
+        },
+        {
+            "source": "check-engine-light",
+            "vhost": "titan-hud",
+            "destination": "check-engine-light",
+            "destination_type": "queue",
+            "routing_key": "check-engine-light",
+            "arguments": {}
+        },
+        {
+            "source": "coolant-temperature-light",
+            "vhost": "titan-hud",
+            "destination": "coolant-temperature-light",
+            "destination_type": "queue",
+            "routing_key": "coolant-temperature-light",
+            "arguments": {}
+        },
+        {
+            "source": "fuel-gauge",
+            "vhost": "titan-hud",
+            "destination": "fuel-gauge",
+            "destination_type": "queue",
+            "routing_key": "fuel-gauge",
+            "arguments": {}
+        },
+        {
+            "source": "low-fuel-light",
+            "vhost": "titan-hud",
+            "destination": "low-fuel-light",
+            "destination_type": "queue",
+            "routing_key": "low-fuel-light",
+            "arguments": {}
+        },
+        {
+            "source": "oil-pressure-light",
+            "vhost": "titan-hud",
+            "destination": "oil-pressure-light",
+            "destination_type": "queue",
+            "routing_key": "oil-pressure-light",
+            "arguments": {}
+        },
+        {
+            "source": "speedometer",
+            "vhost": "titan-hud",
+            "destination": "speedometer",
+            "destination_type": "queue",
+            "routing_key": "speedometer",
+            "arguments": {}
+        },
+        {
+            "source": "tachometer",
+            "vhost": "titan-hud",
+            "destination": "tachometer",
+            "destination_type": "queue",
+            "routing_key": "tachometer",
+            "arguments": {}
+        },
+        {
+            "source": "temperature-gauge",
+            "vhost": "titan-hud",
+            "destination": "temperature-gauge",
+            "destination_type": "queue",
+            "routing_key": "temperature-gauge",
+            "arguments": {}
+        },
+        {
+            "source": "traction-control-light",
+            "vhost": "titan-hud",
+            "destination": "traction-control-light",
+            "destination_type": "queue",
+            "routing_key": "traction-control-light",
             "arguments": {}
         }
     ]
